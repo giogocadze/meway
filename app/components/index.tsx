@@ -2,6 +2,31 @@
 
 import CarCard from "./carCard";
 
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+const SectionHeader = ({ title }: { title: string }) => {
+  return (
+    <div className="flex items-center justify-between mb-4">
+      {/* Title + arrow */}
+      <h1 className="text-2xl font-bold flex items-center gap-2">
+        {title}
+        <ChevronRight className="w-5 h-5" />
+      </h1>
+
+      {/* Navigation arrows */}
+      <div className="flex gap-2">
+        <button className="h-9 w-9 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100">
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+        <button className="h-9 w-9 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100">
+          <ChevronRight className="w-5 h-5" />
+        </button>
+      </div>
+    </div>
+  );
+};
+
+
 const popularCars = [
   {
     image: "/Picture.svg",
@@ -98,18 +123,19 @@ const Index = () => {
     <section className="py-10 flex  flex-col gap-10">
       {/* Popular */}
       <div className="max-w-7xl mx-auto w-full px-6 pl-16">
-  <h1 className="text-2xl font-bold mb-4">პოპულარული</h1>
-  <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6">
-    {popularCars.map((car, i) => (
-      <CarCard key={i} {...car} />
-    ))}
-  </div>
-</div>
+        <SectionHeader title="პოპულარული" />
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6">
+          {popularCars.map((car, i) => (
+            <CarCard key={i} {...car} />
+          ))}
+        </div>
+      </div>
+
 
 
       {/* Budget */}
       <div className="max-w-7xl mx-auto w-full px-6 pl-16">
-        <h1 className="text-2xl font-bold mb-4">ბიუჯეტური ავტომობილი</h1>
+      <SectionHeader title="ბიუჯეტური ავოტომობილი" />
         <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6">
           {budgetCars.map((car, i) => (
             <CarCard key={i} {...car} />
@@ -119,7 +145,7 @@ const Index = () => {
 
       {/* SUV */}
       <div className="max-w-7xl mx-auto w-full px-6 pl-16">
-        <h1 className="text-2xl font-bold mb-4">ჯიპი</h1>
+       <SectionHeader title="ჯიპი" />
         <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6">
           {suvCars.map((car, i) => (
             <CarCard key={i} {...car} />

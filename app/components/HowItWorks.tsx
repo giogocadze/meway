@@ -33,7 +33,7 @@ const steps = [
 const HowItWorks = () => {
   return (
     <section className="bg-[#FAFAFA] py-20">
-      <div className="relative container mx-auto px-4">
+      <div className="relative container  mx-auto px-4">
         {/* Header */}
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">

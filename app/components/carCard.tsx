@@ -21,7 +21,6 @@ const CarCard = ({
   location,
   price,
   badge,
-  isFavorite = false,
 }: CarCardProps) => {
   return (
     <div className="group w-full">
@@ -35,17 +34,7 @@ const CarCard = ({
           className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
 
-        <button
-          className={`absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center bg-white/80 backdrop-blur-sm hover:bg-white shadow-sm ${
-            isFavorite ? "text-red-500" : ""
-          }`}
-        >
-          <Heart
-            className={`w-4 h-4 ${
-              isFavorite ? "fill-current text-red-500" : "text-gray-500"
-            }`}
-          />
-        </button>
+      
       </div>
 
       {/* Content */}
