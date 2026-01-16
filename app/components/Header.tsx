@@ -9,14 +9,14 @@ export default function Header() {
                 {/* Content aligned with Index */}
                 <div className="flex h-16 items-center justify-between">
                     {/* Logo */}
-                    <div className="pl-16"> 
+                    <div className="pl-10"> 
                         <Image src="/meway.svg" width={107} height={33} alt="meeway"  />
                     </div>
 
                     {/* Right actions */}
                     <div className="flex items-center gap-4">
                         <button className="flex items-center gap-1 text-sm text-gray-700 hover:text-black">
-                            <Image src="/car.svg" width={24} height={24} alt="car" />
+                            <Image src="/car.svg" width={24} height={24} alt="car"  className="pl-15" />
                             <span>გაქირავება</span>
                         </button>
 

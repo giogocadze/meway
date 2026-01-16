@@ -24,9 +24,10 @@ const CarCard = ({
   isFavorite = false,
 }: CarCardProps) => {
   return (
-    <div className="group w-full max-w-70">
+    <div className="group w-full">
+
       {/* Image */}
-      <div className="relative overflow-hidden rounded-xl aspect-4/3 mb-3">
+      <div className="relative overflow-hidden rounded-xl aspect-[4/3] mb-3">
         <Image
           src={image}
           alt={name}
